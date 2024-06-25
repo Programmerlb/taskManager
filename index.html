@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cont">
+        <div class="box" id="todo">
+            <h2>TO DO</h2>
+            <div class="task-list"></div>
+            <button onclick="openModal('todo')">+ Add task</button>
+        </div>
+        <div class="box" id="inprogress">
+            <h2>IN PROGRESS</h2>
+            <div class="task-list"></div>
+            <button onclick="openModal('inprogress')">+ Add task</button>
+        </div>
+        <div class="box" id="complete">
+            <h2>COMPLETE</h2>
+            <div class="task-list"></div>
+            <button onclick="openModal('complete')">+ Add task</button>
+        </div>
+    </div>
+
+    <div id="taskBar" class="Bar">
+        <div class="Bar-cont">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Add Task</h2>
+            <form id="taskForm">
+                <input type="hidden" id="columnId">
+                <label for="taskName">Task Name:</label>
+                <input type="text" id="taskName" required>
+                <label for="taskDate">Due Date:</label>
+                <input type="date" id="taskDate" required>
+                <label for="taskDetails">Details:</label>
+                <textarea id="taskDetails" rows="4" required></textarea>
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
